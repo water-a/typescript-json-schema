@@ -1341,6 +1341,7 @@ export function getProgramFromFiles(
         target: ts.ScriptTarget.ES5,
         module: ts.ModuleKind.CommonJS,
         allowUnusedLabels: true,
+        resolveJsonModule: true,
     };
     for (const k in compilerOptions) {
         if (compilerOptions.hasOwnProperty(k)) {
