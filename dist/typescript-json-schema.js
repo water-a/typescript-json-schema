@@ -1004,6 +1004,7 @@ function getProgramFromFiles(files, jsonCompilerOptions, basePath) {
         module: ts.ModuleKind.CommonJS,
         allowUnusedLabels: true,
         resolveJsonModule: true,
+        esModuleInterop: true,
     };
     for (var k in compilerOptions) {
         if (compilerOptions.hasOwnProperty(k)) {
