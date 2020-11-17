@@ -1336,6 +1336,7 @@ export function getProgramFromFiles(
     const compilerOptions = ts.convertCompilerOptionsFromJson(jsonCompilerOptions, basePath).options;
     const options: ts.CompilerOptions = {
         noEmit: true,
+        jsx: ts.JsxEmit.React,
         emitDecoratorMetadata: true,
         experimentalDecorators: true,
         target: ts.ScriptTarget.ES2016,

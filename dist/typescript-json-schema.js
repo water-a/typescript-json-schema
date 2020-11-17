@@ -994,6 +994,7 @@ function getProgramFromFiles(files, jsonCompilerOptions, basePath) {
     var compilerOptions = ts.convertCompilerOptionsFromJson(jsonCompilerOptions, basePath).options;
     var options = {
         noEmit: true,
+        jsx: ts.JsxEmit.React,
         emitDecoratorMetadata: true,
         experimentalDecorators: true,
         target: ts.ScriptTarget.ES2016,
