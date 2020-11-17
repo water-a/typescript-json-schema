@@ -1338,7 +1338,7 @@ export function getProgramFromFiles(
         noEmit: true,
         emitDecoratorMetadata: true,
         experimentalDecorators: true,
-        target: ts.ScriptTarget.ES6,
+        target: ts.ScriptTarget.ES2016,
         module: ts.ModuleKind.CommonJS,
         allowUnusedLabels: true,
         resolveJsonModule: true,

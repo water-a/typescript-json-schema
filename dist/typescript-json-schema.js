@@ -11,16 +11,12 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.exec = exports.programFromConfig = exports.generateSchema = exports.buildGenerator = exports.getProgramFromFiles = exports.JsonSchemaGenerator = exports.getDefaultArgs = exports.Symbol = exports.CompilerOptions = exports.Program = void 0;
+exports.exec = exports.programFromConfig = exports.generateSchema = exports.buildGenerator = exports.getProgramFromFiles = exports.JsonSchemaGenerator = exports.getDefaultArgs = void 0;
 var glob = require("glob");
 var stringify = require("json-stable-stringify");
 var path = require("path");
 var crypto_1 = require("crypto");
 var ts = require("typescript");
-var typescript_1 = require("typescript");
-Object.defineProperty(exports, "Program", { enumerable: true, get: function () { return typescript_1.Program; } });
-Object.defineProperty(exports, "CompilerOptions", { enumerable: true, get: function () { return typescript_1.CompilerOptions; } });
-Object.defineProperty(exports, "Symbol", { enumerable: true, get: function () { return typescript_1.Symbol; } });
 var vm = require("vm");
 var REGEX_FILE_NAME_OR_SPACE = /(\bimport\(".*?"\)|".*?")\.| /g;
 var REGEX_TSCONFIG_NAME = /^.*\.json$/;
@@ -1000,7 +996,7 @@ function getProgramFromFiles(files, jsonCompilerOptions, basePath) {
         noEmit: true,
         emitDecoratorMetadata: true,
         experimentalDecorators: true,
-        target: ts.ScriptTarget.ES5,
+        target: ts.ScriptTarget.ES2016,
         module: ts.ModuleKind.CommonJS,
         allowUnusedLabels: true,
         resolveJsonModule: true,
