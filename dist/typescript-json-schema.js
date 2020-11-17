@@ -835,7 +835,7 @@ var JsonSchemaGenerator = (function () {
         }
         if (asRef) {
             returnedDefinition = {
-                $ref: this.args.id + "#/definitions/" + fullTypeName.replace(/[\\\"><]+/g, ""),
+                $ref: this.args.id + "#/definitions/" + fullTypeName.replace(/^[\w\d]+/g, ""),
             };
         }
         var otherAnnotations = {};
