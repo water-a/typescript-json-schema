@@ -1143,7 +1143,7 @@ export class JsonSchemaGenerator {
             // We don't return the full definition, but we put it into
             // reffedDefinitions below.
             returnedDefinition = {
-                $ref: `${this.args.id}#/definitions/` + fullTypeName,
+                $ref: `${this.args.id}#/definitions/` + fullTypeName.replace(/[\\\"><]+/g, ""),
             };
         }
 
