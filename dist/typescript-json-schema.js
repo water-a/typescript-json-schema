@@ -832,10 +832,11 @@ var JsonSchemaGenerator = (function () {
             else {
                 fullTypeName = this.getTypeName(typ);
             }
+            fullTypeName = fullTypeName.replace(/[^\w\d]+/g, "");
         }
         if (asRef) {
             returnedDefinition = {
-                $ref: this.args.id + "#/definitions/" + fullTypeName.replace(/[^\w\d]+/g, ""),
+                $ref: this.args.id + "#/definitions/" + fullTypeName,
             };
         }
         var otherAnnotations = {};
